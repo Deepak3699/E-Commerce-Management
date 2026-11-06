@@ -43,7 +43,7 @@ def login_user():
     password = input("Enter Your Password :- ").strip()
 
     if name in users and users[name] == password:
-        print("Login successful. Welcome, " + name + "!")
+        print("Login successful. Welcome, " + name )
         return name
 
     print("Invalid name or password.")
@@ -74,7 +74,7 @@ def login_menu():
 def add_product():
     print("\n--- Add Product ---")
 
-    # Product ID
+   
     try:
         product_id = int(input("Enter Product ID: "))
     except ValueError:
@@ -85,19 +85,19 @@ def add_product():
         print("Product ID already exists. It must be unique.")
         return
 
-    # Product name
+    
     name = input("Enter Product Name: ").strip()
     if name == "":
         print("Product name cannot be empty.")
         return
 
-    # Category
+    
     category = input("Enter Category: ").strip()
     if category == "":
         print("Category cannot be empty.")
         return
 
-    # Price
+  
     try:
         price = float(input("Enter Price (Rs.): "))
     except ValueError:
@@ -119,7 +119,7 @@ def add_product():
         print("Stock must be a non-negative integer.")
         return
 
-    # Status depends on stock
+    
     if stock > 0:
         status = "Available"
     else:
