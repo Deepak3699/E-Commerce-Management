@@ -16,7 +16,7 @@ products = {
 
 
 def register_user():
-    print("\n--- New User Registration ---")
+    print("\n------ New User Registration ------")
 
     name = input("Enter Your Name :- ").strip()
     if name == "":
@@ -156,12 +156,19 @@ def view_products():
             sep="\t"
         )
 
-
+def place_order():
+    print("\n ----- Plac order ------ ")
+    print("\n Enter a product name to add :- ")
+    print("\n Enter a product quantity to add :- ")
+    
+    
 def product_menu():
     while True:
         print("\n1. Add Product")
         print("2. View Products")
         print("0. Exit")
+        print("3. For Place Order")
+        
 
         choice = input("Enter your choice: ").strip()
 
@@ -169,6 +176,8 @@ def product_menu():
             add_product()
         elif choice == "2":
             view_products()
+        elif choice == "3":
+            place_order()
         elif choice == "0":
             print("Program closed.")
             break
@@ -179,5 +188,10 @@ def product_menu():
 current_user = login_menu()
 
 if current_user is not None:
-    print("\nWelcome, " + current_user + "!")
+    print("\nWelcome, " + current_user)
     product_menu()
+
+
+# Search Product NOt added yet  
+# Cancel Order not Added yet  ( Addeding now )
+# View Order 
